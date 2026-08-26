@@ -4,6 +4,9 @@ import 'package:my_app/widgets/container_widget.dart';
 import 'package:my_app/widgets/center_widget.dart';
 import 'package:my_app/widgets/image_widget.dart';
 import 'package:my_app/widgets/calculator_widget.dart';
+import 'package:my_app/widgets/lorem_widget.dart';
+import 'package:my_app/widgets/sizebox_widget.dart';
+
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -101,6 +104,63 @@ class MenuPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Text(
                 '5. Calculator Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CalculatorWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '5. Calculator Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoremWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '6. Lorem Ipsum',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SizeboxWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '7. Sizebox Widget',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24,

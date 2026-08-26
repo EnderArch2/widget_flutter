@@ -31,7 +31,7 @@ class TextWidget extends StatelessWidget {
                 color: Colors.yellowAccent,
                 padding: const EdgeInsets.only(top: 10, left: 30, right: 30, bottom: 10),
                 child: const Text(
-                  'SMK Kelas XII SIJA',
+                  'SMK Kelas XII SIJA 2',
                   style: TextStyle(
                     fontSize: 16,
                     fontStyle: FontStyle.italic,
