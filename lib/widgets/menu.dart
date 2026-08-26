@@ -116,25 +116,6 @@ class MenuPage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const CalculatorWidget()),
-              );
-            },
-            child: const Padding(
-              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
-              child: Text(
-                '5. Calculator Widget',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
                 MaterialPageRoute(builder: (context) => const LoremWidget()),
               );
             },
