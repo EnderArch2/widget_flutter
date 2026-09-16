@@ -6,7 +6,10 @@ import 'package:my_app/widgets/image_widget.dart';
 import 'package:my_app/widgets/calculator_widget.dart';
 import 'package:my_app/widgets/lorem_widget.dart';
 import 'package:my_app/widgets/sizebox_widget.dart';
-
+import 'package:my_app/widgets/icon_widget.dart';
+import 'package:my_app/widgets/image_offline_widget.dart';
+import 'package:my_app/widgets/padding_widget.dart';
+import 'package:my_app/widgets/camera_widget.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -40,7 +43,9 @@ class MenuPage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ContainerWidget()),
+                MaterialPageRoute(
+                  builder: (context) => const ContainerWidget(),
+                ),
               );
             },
             child: const Padding(
@@ -97,13 +102,36 @@ class MenuPage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const CalculatorWidget()),
+                MaterialPageRoute(
+                  builder: (context) => const ImageOfflineWidget(),
+                ),
               );
             },
             child: const Padding(
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Text(
-                '5. Calculator Widget',
+                '5. Image Widget (in project)',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CalculatorWidget(),
+                ),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '6. Calculator Widget',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24,
@@ -122,7 +150,7 @@ class MenuPage extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Text(
-                '6. Lorem Ipsum',
+                '7. Lorem Ipsum',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24,
@@ -141,7 +169,64 @@ class MenuPage extends StatelessWidget {
             child: const Padding(
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Text(
-                '7. Sizebox Widget',
+                '8. Sizebox Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const IconWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '9. Icon Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PaddingWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '10. Padding Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CameraWidget()),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '11. Camera Widget',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24,

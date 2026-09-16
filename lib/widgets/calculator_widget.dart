@@ -2,11 +2,23 @@ import 'package:flutter/material.dart';
 
 /// Sealed hierarchy for calculator button operation tokens.
 sealed class CalcAction {}
-class NumberAction extends CalcAction { final String digit; NumberAction(this.digit); }
-class OperatorAction extends CalcAction { final String op; OperatorAction(this.op); }
+
+class NumberAction extends CalcAction {
+  final String digit;
+  NumberAction(this.digit);
+}
+
+class OperatorAction extends CalcAction {
+  final String op;
+  OperatorAction(this.op);
+}
+
 class ClearAction extends CalcAction {}
+
 class BackspaceAction extends CalcAction {}
+
 class DecimalAction extends CalcAction {}
+
 class EqualsAction extends CalcAction {}
 
 class CalculatorWidget extends StatefulWidget {
@@ -36,7 +48,9 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
           _isOperandPressed = false;
 
         case BackspaceAction():
-          _output = _output.length > 1 ? _output.substring(0, _output.length - 1) : '0';
+          _output = _output.length > 1
+              ? _output.substring(0, _output.length - 1)
+              : '0';
 
         case OperatorAction(:var op):
           _num1 = double.tryParse(_output) ?? 0;
@@ -86,7 +100,12 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
     });
   }
 
-  Widget _buildButton(String text, CalcAction action, {Color? color, Color textColor = Colors.black}) {
+  Widget _buildButton(
+    String text,
+    CalcAction action, {
+    Color? color,
+    Color textColor = Colors.black,
+  }) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.all(4.0),
@@ -139,7 +158,10 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                   const SizedBox(height: 8),
                   Text(
                     _output,
-                    style: const TextStyle(fontSize: 44, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 44,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -152,9 +174,24 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
               children: [
                 Row(
                   children: [
-                    _buildButton('C', ClearAction(), color: Colors.redAccent, textColor: Colors.white),
-                    _buildButton('⌫', BackspaceAction(), color: Colors.orangeAccent, textColor: Colors.white),
-                    _buildButton('÷', OperatorAction('÷'), color: Colors.purpleAccent, textColor: Colors.white),
+                    _buildButton(
+                      'C',
+                      ClearAction(),
+                      color: Colors.redAccent,
+                      textColor: Colors.white,
+                    ),
+                    _buildButton(
+                      '⌫',
+                      BackspaceAction(),
+                      color: Colors.orangeAccent,
+                      textColor: Colors.white,
+                    ),
+                    _buildButton(
+                      '÷',
+                      OperatorAction('÷'),
+                      color: Colors.purpleAccent,
+                      textColor: Colors.white,
+                    ),
                   ],
                 ),
                 Row(
@@ -162,7 +199,12 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                     _buildButton('7', NumberAction('7')),
                     _buildButton('8', NumberAction('8')),
                     _buildButton('9', NumberAction('9')),
-                    _buildButton('×', OperatorAction('×'), color: Colors.purpleAccent, textColor: Colors.white),
+                    _buildButton(
+                      '×',
+                      OperatorAction('×'),
+                      color: Colors.purpleAccent,
+                      textColor: Colors.white,
+                    ),
                   ],
                 ),
                 Row(
@@ -170,7 +212,12 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                     _buildButton('4', NumberAction('4')),
                     _buildButton('5', NumberAction('5')),
                     _buildButton('6', NumberAction('6')),
-                    _buildButton('-', OperatorAction('-'), color: Colors.purpleAccent, textColor: Colors.white),
+                    _buildButton(
+                      '-',
+                      OperatorAction('-'),
+                      color: Colors.purpleAccent,
+                      textColor: Colors.white,
+                    ),
                   ],
                 ),
                 Row(
@@ -178,14 +225,24 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                     _buildButton('1', NumberAction('1')),
                     _buildButton('2', NumberAction('2')),
                     _buildButton('3', NumberAction('3')),
-                    _buildButton('+', OperatorAction('+'), color: Colors.purpleAccent, textColor: Colors.white),
+                    _buildButton(
+                      '+',
+                      OperatorAction('+'),
+                      color: Colors.purpleAccent,
+                      textColor: Colors.white,
+                    ),
                   ],
                 ),
                 Row(
                   children: [
                     _buildButton('0', NumberAction('0')),
                     _buildButton('.', DecimalAction()),
-                    _buildButton('=', EqualsAction(), color: Colors.purpleAccent, textColor: Colors.white),
+                    _buildButton(
+                      '=',
+                      EqualsAction(),
+                      color: Colors.purpleAccent,
+                      textColor: Colors.white,
+                    ),
                   ],
                 ),
               ],

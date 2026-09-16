@@ -5,7 +5,9 @@ class ContainerWidget extends StatelessWidget {
   const ContainerWidget({super.key});
 
   Future<void> _launchFacebookLite() async {
-    final Uri appUri = Uri.parse('fb://facewebmodal/f?href=https://www.facebook.com');
+    final Uri appUri = Uri.parse(
+      'fb://facewebmodal/f?href=https://www.facebook.com',
+    );
     final Uri webUri = Uri.parse('https://m.facebook.com');
 
     try {
@@ -29,7 +31,7 @@ class ContainerWidget extends StatelessWidget {
           'Belajar Container Widget',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Colors.blueAccent,
       ),
       body: Center(
         child: Container(
@@ -49,11 +51,7 @@ class ContainerWidget extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
-                Icons.phone_android,
-                color: Colors.white,
-                size: 60,
-              ),
+              const Icon(Icons.phone_android, color: Colors.white, size: 60),
               const SizedBox(height: 15),
               const Text(
                 'Mobile Development',
@@ -67,9 +65,7 @@ class ContainerWidget extends StatelessWidget {
               const Text(
                 'Belajar Flutter menggunakan Container',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+                style: TextStyle(color: Colors.white),
               ),
               const SizedBox(height: 20),
               ElevatedButton.icon(

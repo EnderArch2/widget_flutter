@@ -73,7 +73,7 @@ class _ImageWidgetState extends State<ImageWidget> {
                             child: CircularProgressIndicator(
                               value: loadingProgress.expectedTotalBytes != null
                                   ? loadingProgress.cumulativeBytesLoaded /
-                                      loadingProgress.expectedTotalBytes!
+                                        loadingProgress.expectedTotalBytes!
                                   : null,
                             ),
                           ),
@@ -100,9 +100,7 @@ class _ImageWidgetState extends State<ImageWidget> {
                   : Container(
                       height: 250,
                       color: Colors.grey[200],
-                      child: const Center(
-                        child: Text('Masukkan URL gambar'),
-                      ),
+                      child: const Center(child: Text('Masukkan URL gambar')),
                     ),
             ),
           ],
