@@ -34,7 +34,7 @@ class _IconWidgetState extends State<IconWidget>
     (icon: FontAwesomeIcons.gitlab, color: Colors.deepOrange, size: 32.0),
     (icon: FontAwesomeIcons.android, color: Colors.green, size: 32.0),
     (icon: FontAwesomeIcons.apple, color: Colors.black87, size: 32.0),
-    (icon: FontAwesomeIcons.linux, color: Colors.amber, size: 32.0),
+    (icon: FontAwesomeIcons.linux, color: Colors.black87, size: 32.0),
     (icon: FontAwesomeIcons.windows, color: Colors.lightBlue, size: 32.0),
     (icon: FontAwesomeIcons.aws, color: Colors.deepOrange, size: 32.0),
     (icon: FontAwesomeIcons.google, color: Colors.blue, size: 32.0),

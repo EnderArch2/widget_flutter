@@ -10,6 +10,7 @@ import 'package:my_app/widgets/icon_widget.dart';
 import 'package:my_app/widgets/image_offline_widget.dart';
 import 'package:my_app/widgets/padding_widget.dart';
 import 'package:my_app/widgets/camera_widget.dart';
+import 'package:my_app/widgets/tictactoe_widget.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -227,6 +228,27 @@ class MenuPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Text(
                 '11. Camera Widget',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TicTacToeWidget(),
+                ),
+              );
+            },
+            child: const Padding(
+              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              child: Text(
+                '12. Tic Tac Toe Widget',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24,
