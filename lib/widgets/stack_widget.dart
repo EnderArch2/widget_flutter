@@ -141,7 +141,7 @@ class StackWidget extends StatelessWidget {
                   child: Stack(
                     children: [
                       Image.asset(
-                        'assets/images/Mall.jpg',
+                        'assets/images/Sinon_GGO.webp',
                         width: 300,
                         height: 180,
                         fit: BoxFit.cover,

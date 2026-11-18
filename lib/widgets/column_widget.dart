@@ -629,13 +629,13 @@ class ColumnWidget extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 50,
-                        backgroundImage: AssetImage('assets/images/Doni.jpg'),
+                        backgroundImage: AssetImage('assets/images/pic.jpg'),
                       ),
 
                       SizedBox(height: 16),
 
                       Text(
-                        'Donianto Bonis Nugroho',
+                        'Giovanni Achmad Avicena',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
