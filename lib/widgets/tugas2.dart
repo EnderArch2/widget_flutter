@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 const Color _primaryBlue = Color(0xFF2F6BFF);
 const Color _pageBackground = Color(0xFFF7F8FC);
 
-/// Placeholder for actions that are not wired up yet.
-void _noop() {}
-
 class Tugas2Widget extends StatelessWidget {
   const Tugas2Widget({super.key});
 
