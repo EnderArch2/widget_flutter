@@ -15,6 +15,9 @@ import 'package:my_app/chess/screens/chess_screen.dart';
 import 'package:my_app/widgets/row_widget.dart';
 import 'package:my_app/widgets/column_widget.dart';
 import 'package:my_app/widgets/stack_widget.dart';
+import 'package:my_app/widgets/expanded_widget.dart';
+import 'package:my_app/widgets/flexible_widget.dart';
+import 'package:my_app/widgets/align_widget.dart';
 import 'package:my_app/widgets/tugas1.dart';
 import 'package:my_app/widgets/tugas2.dart';
 
@@ -288,6 +291,25 @@ class MenuPage extends StatelessWidget {
               ),
             ),
 
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 13),
+              color: Colors.purpleAccent,
+              child: const Text(
+                'LAYOUT WIDGET',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 10,
+              color: Colors.yellowAccent.shade400,
+            ),
             SizedBox(
               width: double.infinity,
               child: Column(
@@ -355,7 +377,7 @@ class MenuPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const RowWidget(),
+                                builder: (context) => const ExpandedWidget(),
                               ),
                             ),
                           },
@@ -363,7 +385,7 @@ class MenuPage extends StatelessWidget {
                             backgroundColor: Colors.purpleAccent,
                           ),
                           child: const Text(
-                            'Row',
+                            'Expanded',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
@@ -372,7 +394,7 @@ class MenuPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const RowWidget(),
+                                builder: (context) => const FlexibleWidget(),
                               ),
                             ),
                           },
@@ -380,7 +402,7 @@ class MenuPage extends StatelessWidget {
                             backgroundColor: Colors.purpleAccent,
                           ),
                           child: const Text(
-                            'Row',
+                            'Flexible',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
@@ -389,7 +411,7 @@ class MenuPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const RowWidget(),
+                                builder: (context) => const AlignWidget(),
                               ),
                             ),
                           },
@@ -397,7 +419,7 @@ class MenuPage extends StatelessWidget {
                             backgroundColor: Colors.purpleAccent,
                           ),
                           child: const Text(
-                            'Row',
+                            'Align',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
