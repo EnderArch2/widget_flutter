@@ -14,6 +14,9 @@ import 'package:my_app/widgets/tictactoe_widget.dart';
 import 'package:my_app/chess/screens/chess_screen.dart';
 import 'package:my_app/widgets/row_widget.dart';
 import 'package:my_app/widgets/column_widget.dart';
+import 'package:my_app/widgets/stack_widget.dart';
+import 'package:my_app/widgets/tugas1.dart';
+import 'package:my_app/widgets/tugas2.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -335,7 +338,7 @@ class MenuPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const RowWidget(),
+                                builder: (context) => const StackWidget(),
                               ),
                             ),
                           },
@@ -343,7 +346,7 @@ class MenuPage extends StatelessWidget {
                             backgroundColor: Colors.purpleAccent,
                           ),
                           child: const Text(
-                            'Row',
+                            'Stack',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
@@ -455,6 +458,72 @@ class MenuPage extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 13),
+              color: Colors.indigo,
+              child: const Text(
+                'EVALUASI',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 10,
+              color: Colors.yellowAccent.shade400,
+            ),
+            const SizedBox(height: 12),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tugas1Widget(),
+                      ),
+                    ),
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.yellowAccent,
+                    foregroundColor: Colors.indigo,
+                    minimumSize: const Size(130, 40),
+                    shape: const RoundedRectangleBorder(),
+                  ),
+                  child: const Text(
+                    'TUGAS 1',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tugas2Widget(),
+                      ),
+                    ),
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.yellowAccent,
+                    foregroundColor: Colors.indigo,
+                    minimumSize: const Size(130, 40),
+                    shape: const RoundedRectangleBorder(),
+                  ),
+                  child: const Text(
+                    'TUGAS 2',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 75),
           ],
         ),
       ),
